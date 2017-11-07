@@ -1,6 +1,6 @@
 {
   "DocumentVersion": 201606271,
-  "ID": "51be93fd-e334-4fc2-9ea0-5c303b682422",
+  "ID": "d429387b-a439-49a7-906e-bf5f920243bf",
   "StagedUserSettings": {},
   "Macros": [
     {
@@ -181,14 +181,14 @@
     "calibration_files": "Calibration - Circle.stl",
     "oem_profile_token": "ag9zfm1hdHRlcmNvbnRyb2xyQwsSCUFmZmlsaWF0ZRiAgKDK9bzHCwwLEgZEZXZpY2UYgICAgIDyiAoMCxINRGV2aWNlUHJvZmlsZRiAgICAgK6ZCgw"
   },
-  "ActiveQualityKey": "071268e4-8172-43da-bb46-4b2084426487",
+  "ActiveQualityKey": "031d20f3-5b81-41e4-8b82-7c86767f5b85",
   "MaterialSettingsKeys": [
     "046829fb-7d30-44ba-acae-0f883c8ec6e6"
   ],
   "UserLayer": {
     "printer_name": "MPSelectMini",
     "active_theme_name": "Purple - Light",
-    "active_quality_key": "071268e4-8172-43da-bb46-4b2084426487",
+    "active_quality_key": "031d20f3-5b81-41e4-8b82-7c86767f5b85",
     "bed_size": "120,120",
     "print_center": "60,60",
     "build_height": "120",
@@ -197,7 +197,8 @@
     "ip_address": "192.168.2.101",
     "start_gcode": "G90 ; absolute positioning - this line was added in case Cura doesn't include it by default\\nM82 ; set extruder to absolute mode - this line was added in case Cura doesn't include it by default (may not be needed)\\nG28 ; home all axes\\n; The lines below are to prep the nozzle before a print begins\\nG1 Z0.2 F1200 ; raise nozzle 0.2mm\\nG92 E0 ; reset extrusion distance\\nG1 Y10 ; move Y-Axis (bed) 10mm to prep for purge\\nG1 X100 E12 F600 ; move X-carriage 100mm while purging 12mm of filament\\nG92 E0 ; reset extrusion distance",
     "end_gcode": "M104 S0 ; turn off hotend/extruder heater\\nM140 S0 ; turn off bed heater\\nG91 ; Switch to use Relative Coordinates\\nG1 E-2 F300 ; retract the filament a bit before lifting the nozzle to release some of the pressure\\nG1 Z1 ; raise Z 1mm from current position\\nG1 E-2 F300 ; retract filament even more\\nG90 ; Switch back to using Absolute Coordinates\\nG1 X20 ; move X axis close to tower but hopefully far enough to keep the fan from rattling\\nG1 Y120 ; move bed forward for easier part removal\\nM84 ; disable motors",
-    "bottum_solid_layers": "0.3mm"
+    "bottum_solid_layers": "0.30625mm",
+    "skirt_distance": "3"
   },
   "MaterialLayers": [
     {
@@ -238,7 +239,50 @@
       "infill_speed": "55",
       "top_solid_infill_speed": "55",
       "raft_air_gap": "0.21875",
-      "support_air_gap": "0.30625"
+      "support_air_gap": "0.30625",
+      "support_material_create_internal_support": "1"
+    },
+    {
+      "layer_name": "X2 (normal)",
+      "layer_id": "42494e05-05fe-40a0-b7bb-7b49b28ecbce",
+      "layer_height": "0.21875",
+      "first_layer_height": "0.30625",
+      "bottom_solid_layers": "2",
+      "top_solid_layers": "2",
+      "raft_air_gap": "0.21875",
+      "support_air_gap": "0.30625",
+      "support_material_create_internal_support": "1",
+      "layer_etag": "",
+      "layer_source": "",
+      "retract_length": "2"
+    },
+    {
+      "layer_name": "X1 (fine)",
+      "layer_id": "78badadd-0190-47a4-ba78-809343942f69",
+      "layer_height": "0.13125",
+      "first_layer_height": "0.30625",
+      "bottom_solid_layers": "3",
+      "top_solid_layers": "3",
+      "raft_air_gap": "0.21875",
+      "support_air_gap": "0.30625",
+      "support_material_create_internal_support": "1",
+      "layer_etag": "",
+      "layer_source": "",
+      "retract_length": "2"
+    },
+    {
+      "layer_name": "X0 (extra fine)",
+      "layer_id": "031d20f3-5b81-41e4-8b82-7c86767f5b85",
+      "layer_height": "0.13125",
+      "first_layer_height": "0.30625",
+      "bottom_solid_layers": "4",
+      "top_solid_layers": "4",
+      "raft_air_gap": "0.21875",
+      "support_air_gap": "0.30625",
+      "support_material_create_internal_support": "1",
+      "layer_etag": "",
+      "layer_source": "",
+      "retract_length": "2"
     }
   ]
 }
