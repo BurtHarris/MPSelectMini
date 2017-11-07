@@ -2,7 +2,26 @@
   "DocumentVersion": 201606271,
   "ID": "51be93fd-e334-4fc2-9ea0-5c303b682422",
   "StagedUserSettings": {},
-  "Macros": [],
+  "Macros": [
+    {
+      "Name": "Home All",
+      "GCode": "G28 ; Home All Axes",
+      "ActionGroup": false,
+      "LastModified": "0001-01-01T00:00:00"
+    },
+    {
+      "Name": "Autotune Extruder Temp. (Reboot required to adjust PID)",
+      "GCode": "M303 S210 C15\nM500",
+      "ActionGroup": false,
+      "LastModified": "0001-01-01T00:00:00"
+    },
+    {
+      "Name": "Autotune Bed Temp",
+      "GCode": "M303 E-1 S60 C5 ; Runs PID Autotune for bed temprature\nM500 Save EEPROM;  ",
+      "ActionGroup": false,
+      "LastModified": "0001-01-01T00:00:00"
+    }
+  ],
   "OemLayer": {
     "avoid_crossing_perimeters": "1",
     "bed_shape": "rectangular",
