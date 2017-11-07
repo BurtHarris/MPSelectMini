@@ -164,16 +164,19 @@
   },
   "ActiveQualityKey": "",
   "MaterialSettingsKeys": [
-    "4a8349f0-e12e-405d-93ad-bded5969f6d2"
+    "046829fb-7d30-44ba-acae-0f883c8ec6e6"
   ],
   "UserLayer": {
     "printer_name": "MPSelectMini",
     "active_theme_name": "Purple - Light",
+    "active_quality_key": "",
     "bed_size": "120,120",
     "print_center": "60,60",
     "build_height": "120",
-    "driver_type": "RepRap"
-    },
+    "driver_type": "TCPIP",
+    "enable_network_printing": "1",
+    "ip_address": "192.168.2.101"
+  },
   "MaterialLayers": [
     {
       "layer_name": "ABS",
@@ -190,6 +193,16 @@
       "bed_temperature": "70",
       "fan_always_on": "1",
       "temperature": "200"
+    },
+    {
+      "layer_name": "PLA w/o bed heat (Blue Tape)",
+      "filament_density": "1.24",
+      "layer_id": "046829fb-7d30-44ba-acae-0f883c8ec6e6",
+      "bed_temperature": "0",
+      "fan_always_on": "1",
+      "temperature": "200",
+      "layer_etag": "",
+      "layer_source": ""
     }
   ],
   "QualityLayers": []
